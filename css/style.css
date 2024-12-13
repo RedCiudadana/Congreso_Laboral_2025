@@ -17172,3 +17172,11 @@ label.checkbox { padding-left: 20px; }
 	margin-bottom: 20px;
 	padding: 10px;
 }
+
+.table-group-title {
+    background-color: #d9e8f6;
+    padding: 10px;
+    font-weight: bold;
+    border-top: 2px solid #ccc;
+	text-align: center;
+}
