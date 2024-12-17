@@ -4,7 +4,7 @@ permalink: congresos/index.html
 {% extends "src/base.njk" %}
 
 {% block head %}
-<title>Congreso Laboral 2025 | Contacto</title>
+<title>Congreso Laboral 2025</title>
 <link rel="stylesheet" href="/css/main.css" type="text/css" />
 {% endblock %}
 
@@ -27,27 +27,18 @@ permalink: congresos/index.html
                     <h1>Congresos Realizados</h1>
                 </div>
 
+                {% for congreso in collections.congresos %}
                 <div class="col-lg-4 my-2">
                     <div>
-                        <img src="/ELEMENTOS/Congreso/New/07_IMAGENES/CONGRESO LABORALai-29.png">
+                        <img src="{{congreso.data.image}}">
                         <div class="congresos_content">
-                            <h4>Día 2</h4>
-                            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</p>
-                            <a class="btn btn-blue">Más Información</a>
+                            <h4>{{congreso.data.title}}</h4>
+                            <p>{{congreso.data.descripcion | safe}}</p>
+                            <a class="btn btn-blue" href="#">Más Información</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 my-2">
-                    <div>
-                        <img src="/ELEMENTOS/Congreso/New/07_IMAGENES/CONGRESO LABORALai-30.png">
-                        <div class="congresos_content">
-                            <h4>Día 2</h4>
-                            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</p>
-                            <a class="btn btn-blue">Más Información</a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

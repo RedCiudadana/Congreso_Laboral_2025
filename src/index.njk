@@ -24,7 +24,7 @@ permalink: "index.html"
                     <div class="my-6" style="text-align:left">
                         <h3 class="text-white notranslate" style="font-size:40px; margin-bottom:5px">Congreso Nacional de Derecho Laboral 2024</h3>
                         <br>
-                        <p class="text-white" style="font-size:20px;font-weight:400;line-height:24px">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</p>
+                        <p class="text-white" style="font-size:20px;font-weight:400;line-height:24px">Construyendo justicia laboral transparente y accesible para Guatemala</p>
                         <br>
                         <a class="btn btn-blue" href="/Congreso-Derecho-Laboral-2024/index.html">Ver Jurisprudencia</a>
                     </div>
@@ -50,18 +50,12 @@ permalink: "index.html"
             <div class="row">
                 <div class="col-lg-6 my-4 d-flex align-items-center">
                     <div>
-                        <h1>Lorem Ipsum Dolor</h1>
+                        <h1>Congreso Nacional de Derecho Laboral 2024</h1>
                         <p>
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet,
-                            Lorem ipsum dolor sit amet
+                            El Congreso Nacional de Derecho Laboral es un espacio de diálogo, 
+                            análisis y propuestas sobre los desafíos y oportunidades en el ámbito 
+                            de la justicia laboral. Reúne a expertos, académicos, jueces, 
+                            abogados y actores clave para fortalecer el acceso a una justicia eficiente, transparente e inclusiva.
                         </p>
                     </div>
                 </div>
@@ -82,22 +76,22 @@ permalink: "index.html"
             <div class="col-lg-4 px-0">
                 <div style="background-image: url('/ELEMENTOS/Congreso/New/07_IMAGENES/CONGRESO\ LABORALai-24.png'); background-size: cover;">
                     <div class="content-estadistic">
-                        <p class="number">10</p>
-                        <h4>Lorem ipsum dolor</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet
-                        </p>
+                        <p class="number">2</p>
+                        <p>Ediciones exitosas del Congreso realizadas a nivel nacional.</p>
+                        <!-- <p>
+                            
+                        </p> -->
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 px-0">
                 <div style="background-image: url('/ELEMENTOS/Congreso/New/07_IMAGENES/CONGRESO\ LABORALai-25.png'); background-size: cover;">
                     <div class="content-estadistic">
-                        <p class="number">30</p>
-                        <h4>Lorem ipsum dolor</h4>
-                        <p>
+                        <p class="number">+10</p>
+                        <p>Exponentes nacionales e internacionales expertos en justicia laboral, tecnología y gobernanza.</p>
+                        <!-- <p>
                             Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -105,10 +99,10 @@ permalink: "index.html"
                 <div style="background-image: url('/ELEMENTOS/Congreso/New/07_IMAGENES/CONGRESO\ LABORALai-26.png'); background-size: cover;">
                     <div class="content-estadistic">
                         <p class="number">+100</p>
-                        <h4>Lorem ipsum dolor</h4>
-                        <p>
+                        <p>Participantes comprometidos en la construcción de una justicia laboral más eficiente, transparente y accesible.</p>
+                        <!-- <p>
                             Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -123,27 +117,19 @@ permalink: "index.html"
                     <h1>Congresos Realizados</h1>
                 </div>
 
+                {% for congreso in collections.congresos %}
                 <div class="col-lg-4 my-2">
                     <div>
-                        <img src="/ELEMENTOS/Congreso/New/07_IMAGENES/CONGRESO LABORALai-29.png">
+                        <img src="{{congreso.data.image}}">
                         <div class="congresos_content">
-                            <h4>Día 2</h4>
-                            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</p>
-                            <a class="btn btn-blue">Más Información</a>
+                            <h4>{{congreso.data.title}}</h4>
+                            <p>{{congreso.data.descripcion | safe}}</p>
+                            <a class="btn btn-blue" href="#">Más Información</a>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
 
-                <div class="col-lg-4 my-2">
-                    <div>
-                        <img src="/ELEMENTOS/Congreso/New/07_IMAGENES/CONGRESO LABORALai-30.png">
-                        <div class="congresos_content">
-                            <h4>Día 2</h4>
-                            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</p>
-                            <a class="btn btn-blue">Más Información</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

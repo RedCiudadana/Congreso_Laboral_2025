@@ -7079,6 +7079,7 @@ tbody tr{
 
 .content-estadistic p{
   color: #fff!important;
+  height: 100px;
 }
 
 .content-estadistic::before {
@@ -7108,6 +7109,10 @@ tbody tr{
 .congresos_content h4, .congresos_content p{
   text-align: start;
   margin-bottom:15px;
+}
+
+.congresos_content h4{
+  height: 50px;
 }
 
 .videos_content{
@@ -7152,3 +7157,14 @@ tbody tr{
   }
 }
 
+.content-estadistic-2{
+  padding:150px 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-estadistic-2 p{
+  text-align: center;
+  color: #fff!important;
+}

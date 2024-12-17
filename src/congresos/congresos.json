@@ -1,0 +1,4 @@
+{
+    "tags": "congresos",
+    "permalink": "congresos/{{ page.fileSlug | slug}}/index.html"
+}
