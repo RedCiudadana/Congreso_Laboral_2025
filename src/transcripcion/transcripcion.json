@@ -1,0 +1,4 @@
+{
+    "tags": "transcripcion",
+    "permalink": "transcripcion/{{ page.fileSlug | slug}}/index.html"
+}

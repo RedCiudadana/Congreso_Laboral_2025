@@ -155,18 +155,29 @@ permalink: "index.html"
                     <h1>Videos y Transcripción</h1>
                 </div>
 
-                {% for video in collections.videos | limit(3)%}
-                    
-                    
+                {% for video in collections.videos %}     
                 <div class="col-lg-4 my-2">
-                    <div>
+                    <div class="videos_content_media"><a href="#">
                         {{video.data.link | safe}}
                         <div class="videos_content">
                             <p>{{video.data.date | dateFormat('DD/MM/YYYY')}}</p>
                             <h4 class="truncate">{{video.data.title}}</h4>
                             <p>{{video.data.descripcion}}</p>
                         </div>
-                    </div>
+                    </a></div>
+                </div>
+                {% endfor %}
+
+                {% for trans in collections.transcripcion %}      
+                <div class="col-lg-4 my-2">
+                    <div class="videos_content_media"><a href="{{trans.data.link | safe}}">
+                        <img src="{{trans.data.image}}">
+                        <div class="videos_content">
+                            <p>{{trans.data.date | dateFormat('DD/MM/YYYY')}}</p>
+                            <h4 class="truncate">{{trans.data.title}}</h4>
+                            <p>{{trans.data.descripcion | safe}}</p>
+                        </div>
+                    </a></div>
                 </div>
                 {% endfor %}
 

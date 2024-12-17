@@ -7121,6 +7121,22 @@ tbody tr{
   height: 100%;
 }
 
+.videos_content_media iframe{
+  height: 210px!important;
+}
+
+.videos_content_media img{
+  height: 210px;
+}
+
+.videos_content_media:hover{
+  transition: 0.5s all ease;
+}
+
+.videos_content_media:hover{
+  transform: translate(-5px, -5px);
+}
+
 .videos_content h4, .videos_content p{
   text-align: start;
   margin-bottom:15px;
