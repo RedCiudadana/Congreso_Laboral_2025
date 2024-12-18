@@ -1,10 +1,10 @@
 ---
-permalink: Congreso-Derecho-Laboral-2024/index.html
+permalink: jurisprudencia/index.html
 ---
 {% extends "src/base.njk" %}
 
 {% block head %}
-<title>Expedientes | Congreso Laboral 2025</title>
+<title>Jurisprudencia | Congreso Laboral 2025</title>
 <link rel="stylesheet" href="/css/main.css" type="text/css" />
 {% endblock %}
 
@@ -80,7 +80,7 @@ permalink: Congreso-Derecho-Laboral-2024/index.html
                                         </div>
                                         <div class="table-cell institucion">
                                             <div>
-                                                <b class="bold-black">Corte:</b>
+                                                <b class="bold-black">Nombre de institución:</b>
                                                 <br>
                                                 {{ expediente.institucion }}
                                             </div>
@@ -145,7 +145,7 @@ permalink: Congreso-Derecho-Laboral-2024/index.html
 
 // Variables para la paginación
 let currentPage = 1;
-const rowsPerPage = 12;
+const rowsPerPage = 9;
 
 // Inicializar la tabla con paginación
 function initTable() {

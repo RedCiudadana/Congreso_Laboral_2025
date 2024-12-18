@@ -7122,11 +7122,13 @@ tbody tr{
 }
 
 .videos_content_media iframe{
-  height: 210px!important;
+  height: 240px!important;
+  width: 100%;
 }
 
 .videos_content_media img{
-  height: 210px;
+  height: 240px;
+  width: 100%;
 }
 
 .videos_content_media:hover{

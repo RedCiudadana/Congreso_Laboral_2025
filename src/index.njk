@@ -16,12 +16,12 @@ permalink: "index.html"
         <a target="_blank" href="https://bit.ly/EncuentroJusticiaAbierta"><img src="/ELEMENTOS/popup-ju.gif"></a>
     </div>
 
-    <div class="section m-0 py-6" style="background-image: url('/ELEMENTOS/Congreso/New/06_BANNER/CONGRESO\ LABORALai.png'); background-size: cover;">
+    <div class="section m-0 py-4" style="background-image: url('/ELEMENTOS/Congreso/New/06_BANNER/CONGRESO\ LABORALai.png'); background-size: cover;">
         <div class="container">
-            <div class="row my-6 py-6">
+            <div class="row my-2 py-2">
                 <div class="col-lg-5 d-flex" style="align-items:center">
 
-                    <div class="my-6" style="text-align:left">
+                    <div class="my-4" style="text-align:left">
                         <h3 class="text-white notranslate" style="font-size:40px; margin-bottom:5px">Congreso Nacional de Derecho Laboral 2024</h3>
                         <br>
                         <p class="text-white" style="font-size:20px;font-weight:400;line-height:24px">Construyendo justicia laboral transparente y accesible para Guatemala</p>
@@ -170,7 +170,7 @@ permalink: "index.html"
 
                 {% for trans in collections.transcripcion %}      
                 <div class="col-lg-4 my-2">
-                    <div class="videos_content_media"><a href="{{trans.data.link | safe}}">
+                    <div class="videos_content_media"><a href="{{trans.data.link | safe}}" target="_blank">
                         <img src="{{trans.data.image}}">
                         <div class="videos_content">
                             <p>{{trans.data.date | dateFormat('DD/MM/YYYY')}}</p>
