@@ -1,0 +1,39 @@
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+    
+    <!--SLIDER-->  
+    <div class="w-100" style="background-image: url('/ELEMENTOS/Congreso/New/06_BANNER/CONGRESO\ LABORALai-28.png'); background-size: contain;">
+        <div class="container py-6">
+            <div class="row mx-auto" style="justify-content:center;display: block!important;margin: 2rem 0; padding: 4rem 0;">
+                <h1 style="color: #fff!important;text-align: center;">{{title}}</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--Contenido-->
+    <div class="section m-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-4 d-flex align-items-center">
+                    <div>
+                        <h1>{{title}}</h1>
+                        <p>
+                            {{descripcion | safe}}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 my-4">
+                    <img src="{{image}}">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

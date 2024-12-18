@@ -68,6 +68,8 @@ permalink: jurisprudencia/index.html
                     <br>
                     <h6 class="text-center" id="expedienteCounter"></h6>
                     <br><br>
+                    <h4 class="text-center" id="institucionTitle"></h4>
+                    <br>
                     <div class="table-container">
                         <div class="table-body">
                             <div class="row">
@@ -82,21 +84,25 @@ permalink: jurisprudencia/index.html
                                             <div>
                                                 <b class="bold-black">Nombre de institución:</b>
                                                 <br>
-                                                {{ expediente.institucion }}
+                                                <p class="text-institucion">{{ expediente.institucion }}</p>
                                             </div>
                                         </div>
                                         <div class="table-cell tema">
                                             <div>
                                                 <b class="bold-black">Tema:</b>
                                                 <br>
-                                                {{ expediente.tema }}
+                                                <p>
+                                                    {{ expediente.tema }}
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="table-cell criterios">
                                             <div>
                                                 <b class="bold-black">Criterio:</b>
                                                 <br>
-                                                {{ expediente.criterios }}
+                                                <p>
+                                                    {{ expediente.criterios }}
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="table-cell table-cell-centered" style="display:block;text-align:center">
@@ -118,26 +124,6 @@ permalink: jurisprudencia/index.html
             </div>
         </div>
     </div>
-
-    <!-- videos -->
-    <!-- <div class="section m-0" style="background-color: #fff">
-        <div class="container my-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <a target="_blank" href="https://youtu.be/4HAnRdnv0iA?si=VDyetSDWX25HBQSP"><div class="cuadro_final ">
-                        <img src="/ELEMENTOS/criterios/JA-29.png">
-                        <h4 class="mb-2">Videos del Congreso Interinstitucional de Derecho Laboral 2024</h4>
-                    </div></a>
-                </div>
-                <div class="col-lg-6">
-                    <a target="_blank" href="https://docs.google.com/document/d/1KIV6Hs9Jeg0ClCw9CF_kKw0dPDRnl-V9MJwVK5emRBo/pub"><div class="cuadro_final ">
-                        <img src="/ELEMENTOS/criterios/JA-33.png">
-                        <h4 class="mb-2">Transcripción del Congreso Interinstitucional de Derecho Laboral 2024</h4>
-                    </div></a>
-                </div>
-            </div>
-        </div>
-    </div> -->
 {% endblock %}
 
 {% block body_javascripts %}
@@ -163,6 +149,19 @@ function updateTable() {
     // Mostrar/ocultar filas según la página actual
     rows.forEach(row => (row.style.display = "none"));
     filteredRows.slice(start, end).forEach(row => (row.style.display = ""));
+
+    const currentRows = filteredRows.slice(start, end);
+    const institutionSet = new Set(currentRows.map(row => row.querySelector('.text-institucion').textContent.trim()));
+
+    const institucionTitle = document.getElementById("institucionTitle");
+
+    if (institutionSet.size === 0) {
+        institucionTitle.textContent = "";
+    } else if (institutionSet.size === 1) {
+        institucionTitle.textContent = Array.from(institutionSet)[0]; // Solo el nombre sin la frase
+    } else {
+        institucionTitle.textContent = Array.from(institutionSet).join(', '); // Solo las instituciones separadas por coma
+    }
 
     updateExpedienteCounter(filteredRows.length);
     updatePaginationControls(filteredRows.length);
