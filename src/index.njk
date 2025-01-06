@@ -157,14 +157,14 @@ permalink: "index.html"
 
                 {% for video in collections.videos %}     
                 <div class="col-lg-4 my-2">
-                    <div class="videos_content_media"><a href="#">
+                    <div class="videos_content_media">
                         {{video.data.link | safe}}
                         <div class="videos_content">
                             <p>{{video.data.date | dateFormat('DD/MM/YYYY')}}</p>
                             <h4 class="truncate">{{video.data.title}}</h4>
                             <p>{{video.data.descripcion}}</p>
                         </div>
-                    </a></div>
+                    </div>
                 </div>
                 {% endfor %}
 
