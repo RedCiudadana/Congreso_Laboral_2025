@@ -66,8 +66,11 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("removeLast4", function(str) {
         if (typeof str !== "string") {
-          return str; // Retorna el valor original si no es un string
+          return str; 
         }
-        return str.slice(0, -4); // Elimina las últimas 4 letras
-    });
+        if (str.toLowerCase().endsWith(".pdf")) {
+          return str.slice(0, -4); 
+        }
+        return str; 
+    });      
 }
